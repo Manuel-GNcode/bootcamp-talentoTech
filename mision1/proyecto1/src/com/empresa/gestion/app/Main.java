@@ -11,5 +11,6 @@ public class Main {
     // manuel.presentarse();
 
     NominaService nomina = new NominaService();
+    System.out.println(nomina.calcularSalarioAnual(manuel));
   }
 }

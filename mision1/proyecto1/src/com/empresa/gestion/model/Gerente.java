@@ -17,6 +17,6 @@ public class Gerente extends Empleado{
 
   @Override
   public void presentarse() {
-    System.out.println("Soy el empleado " + getNombre() + ", gano " + getSalario() + "y departamento " + departamento);
+    System.out.println("Soy el empleado " + getNombre() + ", gano " + getSalario() + " y departamento " + departamento);
   }
 }
