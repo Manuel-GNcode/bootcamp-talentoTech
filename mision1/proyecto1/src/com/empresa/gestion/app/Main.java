@@ -5,7 +5,7 @@ public class Main {
   public static void main(String[] args) {
     //crear empleado
     Empleado eduardo = new Empleado("Eduardo", 25, true, 'M', 500, 10);
-    Gerente manuel = new Gerente("Manuel", 28, true, 'M', 2000, 25, "Antioquia");
+    Gerente manuel = new Gerente("Manuel", 28, true, 'M', 2000, 25, "Antioquia", 800);
 
     // eduardo.presentarse();
     // manuel.presentarse();
