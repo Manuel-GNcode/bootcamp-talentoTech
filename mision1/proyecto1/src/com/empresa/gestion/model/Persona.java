@@ -2,9 +2,9 @@ package com.empresa.gestion.model;
 
 public class Persona {
   private String nombre;
-  private int edad;
+  protected int edad;
   protected boolean active;
-  private char genero;
+  protected char genero;
 
   public Persona(String nombre, int edad, boolean active, char genero) {
     this.nombre = nombre;
