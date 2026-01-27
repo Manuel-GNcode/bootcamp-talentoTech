@@ -21,5 +21,7 @@ public class Main {
     double[] salarios = {eduardo.getSalario(), manuel.getSalario()};
 
     System.out.println(nomina.calcularTotalNomina(salarios));
+
+    nomina.simularPagos(8);
   }
 }

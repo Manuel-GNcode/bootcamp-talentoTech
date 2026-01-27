@@ -17,5 +17,15 @@ public class NominaService {
     return total;
   }
 
+  public void simularPagos(int meses) {
+    int contador = 1;
+
+    while (contador <= meses) {
+      System.out.println("Procesando nómina del mes: " + contador);
+      
+      contador++;
+    }
+  }
+
 }
 

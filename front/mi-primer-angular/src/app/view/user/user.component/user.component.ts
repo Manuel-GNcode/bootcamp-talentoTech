@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { JsonPipe } from '@angular/common';
+// import { JsonPipe } from '@angular/common'; <-- no necesario
 
 import { UserService } from '../../../services/user.service/user.service';
 
@@ -8,7 +8,7 @@ import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-user.component',
-  imports: [JsonPipe],
+  imports: [],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css',
 })
