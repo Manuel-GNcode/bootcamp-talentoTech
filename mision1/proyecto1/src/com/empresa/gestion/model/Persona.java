@@ -1,12 +1,14 @@
 package com.empresa.gestion.model;
 
 public class Persona {
+  protected int id;
   private String nombre;
   protected int edad;
   protected boolean active;
   protected char genero;
 
-  public Persona(String nombre, int edad, boolean active, char genero) {
+  public Persona( int id, String nombre, int edad, boolean active, char genero) {
+    this.id = id;
     this.nombre = nombre;
     this.edad = edad;
     this.active = active;
@@ -42,5 +44,9 @@ public class Persona {
     System.out.println("Edad: "+edad);
     System.out.println("Genero: "+genero);
     System.out.println("Estado: "+active);
+  }
+
+  public int getId() {
+    return id;
   }
 }
