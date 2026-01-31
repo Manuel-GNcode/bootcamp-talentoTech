@@ -68,5 +68,6 @@ public class MainLibros {
           break;
       }
     } while (opcion != 5);
+    scanner.close();
   }
 }
