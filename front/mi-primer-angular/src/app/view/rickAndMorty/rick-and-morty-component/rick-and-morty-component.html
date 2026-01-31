@@ -2,9 +2,9 @@
   @for (c of characters; track c.id) {
   <div class="card holographic-card">
     <img width="200" height="200" src="{{c.image}}" alt="{{c.name}}">
-    <h2>{{c.name}}</h2>
+    <h2 class="name">{{c.name}}</h2>
     <div class="information" >
-      <p>{{c.gender}}</p><p>{{c.species}}</p>
+      <p>Género: {{c.gender}}</p><p>Especie: {{c.species}}</p>
     </div>
   </div>
   }

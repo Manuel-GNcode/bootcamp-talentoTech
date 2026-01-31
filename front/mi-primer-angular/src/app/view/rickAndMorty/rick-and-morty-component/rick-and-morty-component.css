@@ -3,9 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
-  background-color: #ccc;
-}
 .ctr {
   display: flex;
   justify-content: space-evenly;
@@ -18,33 +15,23 @@ body {
   width: clamp(200px, 250px, 300px);
   border-radius: 8px;
   overflow: hidden;
-
-  h2 {
-    font-size: 8px;
-    margin: 4px 0;
-    display: flex;
-    justify-content: space-center; 
-    gap: 8px; 
-    padding: 4px;
-  }
 }
-
 img {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
 }
+.name {
+  font-size: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 8px 0;
+}
 .information {
   color: antiquewhite;
-  margin-bottom: 8px;
-}
-
-.holographic-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #000;
+  gap: 16px;
+  margin-bottom: 16px;
 }
 
 .holographic-card {
@@ -61,7 +48,6 @@ img {
 
 .holographic-card h2 {
   color: #0ff;
-  font-size: 2rem;
   position: relative;
   z-index: 2;
 }
