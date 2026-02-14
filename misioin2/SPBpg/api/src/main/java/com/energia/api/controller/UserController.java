@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 @RequestMapping("/api/users")
@@ -22,6 +24,12 @@ public class UserController {
     return userRepository.findAll();
   }
 
+  @GetMapping("/{id}")
+  public User getUserById(@PathVariable Long id) {
+    return userRepository.findById(id)
+    .orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND,"Usuario no encontrado"));
+  }
+
   @PostMapping
   public User createUser(@RequestBody User user) {
       return userRepository.save(user);
@@ -29,7 +37,9 @@ public class UserController {
   
   @PutMapping("/{id}")
   public User updateUser(@PathVariable Long id, @RequestBody User user) {
-    User existing = userRepository.findById(id).orElseThrow();
+    User existing = userRepository.findById(id)
+    .orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND, "El usuario no existe"));
+    
     existing.setUsername(user.getUsername());
     existing.setEmail(user.getEmail());
     return userRepository.save(existing);

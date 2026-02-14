@@ -39,7 +39,7 @@ server:
 **Crear entidad**
 1. src/main/java/com/tuEmpresa/tuProyecto -> creamos carpeta model -> creamos nueva clase
 2. Indicarle: @Entity, @Table(name = "nombre-tabla")
-3. Crear Id, GeneratedValue() y tipo Long
+3. Crear Id, @GeneratedValue() y tipo Long
 4. Crear las columnas de la tabla o propiedades de la entidad @column()
 5. Crear constructor (por defecto vacío)
 6. los getters & setters
@@ -53,6 +53,10 @@ server:
 4. Creamos el constructor donde asignamos el valor de userRepository
 5. Creamos los métodos @GetMapping(), @PostMapping()...
 ##Paso 4
+**Probar si funciona la api**
+1. en apiApplication corremos el server (otra forma: ./mvnw spring-boot:run en cd api)
+1. abrimos postman y hacemos los diferentes request
+##paso 5 
 **Crear Frontend**
 1. ng new nombre_proyecto
 2. Limpiar lo que no se va a usar, favicon, estilos...

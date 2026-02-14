@@ -1,5 +1,10 @@
 package com.energia.api.model;
 
+import java.time.LocalDateTime;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -10,8 +15,19 @@ public class User {
   private long id;
   @Column(nullable = false, unique = true)
   private String username;
-  @Column(nullable = true)
+  @Column(nullable = true, unique = true)
   private String email;
+  @Column(nullable = true)
+  private String password;
+  @Column(nullable = true)
+  @Enumerated(EnumType.STRING)
+  private Role role;
+  @CreationTimestamp
+  @Column(name = "created_at", nullable = false, updatable = false)
+  private LocalDateTime createdAt;
+  @UpdateTimestamp
+  @Column(name = "update_at")
+  private LocalDateTime updateAt;
   
   public User(){};
   
@@ -34,6 +50,20 @@ public class User {
   }
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
+  public Role getRole() {
+    return role;
+  }
+  public void setRole(Role role) {
+    this.role = role;
   }
   
 }
