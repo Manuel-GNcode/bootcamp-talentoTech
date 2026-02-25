@@ -20,12 +20,12 @@ public class User {
   @Column(nullable = true)
   private String password;
   @Column(nullable = true)
-  @Enumerated(EnumType.STRING)
+  @Enumerated(EnumType.STRING) //decorador para el tipo de enum
   private Role role;
-  @CreationTimestamp
+  @CreationTimestamp //decorador para la fecha de creación
   @Column(name = "created_at", nullable = false, updatable = false)
   private LocalDateTime createdAt;
-  @UpdateTimestamp
+  @UpdateTimestamp //Decorador para que se actualice la fecha
   @Column(name = "update_at")
   private LocalDateTime updateAt;
   
