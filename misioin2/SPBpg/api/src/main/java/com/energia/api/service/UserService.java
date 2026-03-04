@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
 import org.springframework.web.server.ResponseStatusException;
 
 import com.energia.api.dto.LoginRequest;
@@ -63,7 +64,7 @@ public class UserService {
   public String login(LoginRequest request) {
     Optional<User> optionalUser = userRepository.findByUsername(request.getUsername());
     if (optionalUser.isEmpty()) {
-      throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuario no encontrado");
+      throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Usuario no encontrado");
     }
     User user = optionalUser.get();
     if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {

@@ -1,5 +1,6 @@
-package com.energia.api.config;
+package com.energia.api.exception;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -14,4 +15,5 @@ public class GlobalExceptionHandler {
         .status(ex.getStatusCode())
         .body("{\"error\": \"" + ex.getReason() + "\"}"); //TODO: mejorar para no hacer el JSON manual
   }
+  
 }
